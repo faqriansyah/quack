@@ -1,0 +1,108 @@
+.qbutton {
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s, transform 0.1s;
+}
+
+.qbutton:hover {
+    filter: brightness(85%);
+}
+
+.qbutton:active {
+    transform: translateY(2px) scale(0.95);
+    /* Menggunakan scale untuk efek lompatan yang cepat */
+}
+
+.qbutton-black {
+    background-color: #000;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.qbutton-white {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.qbutton-blue {
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+.qbutton-red {
+    background-color: #dc3545;
+    color: white;
+    box-shadow: 0 0 10px rgba(220, 53, 69, 0.5);
+}
+
+.qbutton-green {
+    background-color: #28a745;
+    color: white;
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+}
+
+.qbutton-orange {
+    background-color: #fd7e14;
+    color: white;
+    box-shadow: 0 0 10px rgba(253, 126, 20, 0.5);
+}
+
+.qbutton-none {
+    background-color: transparent;
+    color: black;
+}
+
+
+
+
+.qinput {
+    width: 100%;
+    /* Mengikuti lebar parent */
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    margin: 2px;
+}
+
+.qinput:focus {
+    border-color: #007bff;
+    /* Warna border saat fokus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    /* Efek bayangan saat fokus */
+}
+
+.qinput::placeholder {
+    color: #999;
+    /* Warna placeholder */
+    transition: color 0.3s, transform 0.3s;
+}
+
+.qinput:focus::placeholder {
+    color: transparent;
+    /* Hilangkan warna placeholder saat fokus */
+    transform: translateY(-15px);
+    /* Geser placeholder saat fokus */
+}
+
+.qinput:focus+label,
+.qinput:not(:placeholder-shown)+label {
+    transform: translateY(-15px);
+    /* Geser label saat ada teks di input */
+    font-size: 12px;
+    /* Atur ukuran font label */
+    color: #007bff;
+    /* Warna label saat ada teks di input */
+    transition: transform 0.3s, font-size 0.3s, color 0.3s;
+    /* Animasi transform, font-size, dan warna */
+}
