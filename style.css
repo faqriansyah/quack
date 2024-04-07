@@ -18,7 +18,6 @@
 
 .qbutton:active {
     transform: translateY(2px) scale(0.95);
-    /* Menggunakan scale untuk efek lompatan yang cepat */
 }
 
 .qbutton-black {
@@ -67,7 +66,6 @@
 
 .qinput {
     width: 100%;
-    /* Mengikuti lebar parent */
     padding: 10px;
     border: 2px solid #ccc;
     border-radius: 5px;
@@ -77,32 +75,23 @@
 
 .qinput:focus {
     border-color: #007bff;
-    /* Warna border saat fokus */
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    /* Efek bayangan saat fokus */
 }
 
 .qinput::placeholder {
     color: #999;
-    /* Warna placeholder */
     transition: color 0.3s, transform 0.3s;
 }
 
 .qinput:focus::placeholder {
     color: transparent;
-    /* Hilangkan warna placeholder saat fokus */
     transform: translateY(-15px);
-    /* Geser placeholder saat fokus */
 }
 
 .qinput:focus+label,
 .qinput:not(:placeholder-shown)+label {
     transform: translateY(-15px);
-    /* Geser label saat ada teks di input */
     font-size: 12px;
-    /* Atur ukuran font label */
     color: #007bff;
-    /* Warna label saat ada teks di input */
     transition: transform 0.3s, font-size 0.3s, color 0.3s;
-    /* Animasi transform, font-size, dan warna */
 }
